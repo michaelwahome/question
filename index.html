@@ -43,6 +43,13 @@
           No
         </button>
       </div>
+      <!-- Hidden Form to Send Email -->
+      <form id="emailForm" action="https://formsubmit.co/mw.wahome12.mw@gmail.com" method="POST" style="display: none;">
+        <input type="hidden" name="message" value="She said YES! 🎉💖">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_subject" value="Valentine's Response">
+        <button type="submit">Submit</button>
+      </form>
     </div>
   </div>
 
@@ -89,6 +96,9 @@
       valentineQuestion.textContent = "Yayyy!! :3"; // Change the question text
       responseButtons.style.display = 'none'; // Hide both buttons
       confetti(); // Trigger confetti animation
+
+      // Automatically Submit the Form to Send Email
+      emailForm.submit();
     });
   </script>  
 </body>
