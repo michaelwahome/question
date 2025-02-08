@@ -32,7 +32,7 @@
   <div class="flex items-center justify-center h-screen">
     <div class="flex flex-col items-center p-4">
       <img id="imageDisplay" src="./images/image1.gif" alt="Cute kitten with flowers" class="rounded-md h-[300px]" style="object-fit: cover;" />
-      <h2 id="valentineQuestion" class="text-4xl font-bold italic text-[#bd1e59] my-4">Will you be my Valentine?</h2>
+      <h2 id="valentineQuestion" class="text-4xl font-bold italic text-[#bd1e59] my-4">Sydney, will you be my Valentine?</h2>
       <div class="flex gap-4 pt-[20px] items-center" id="responseButtons">
         <button id="yesButton"
           class="bounce2 inline-flex items-center justify-center whitespace-nowrap rounded-md text-[20px] font-medium disabled:pointer-events-none disabled:opacity-50 hover:bg-green-400 min-h-12 min-w-[75px] px-4 py-2 bg-green-500 text-white transition">
@@ -44,11 +44,8 @@
         </button>
       </div>
       <!-- Hidden Form to Send Email -->
-      <form id="emailForm" action="https://formsubmit.co/mw.wahome12.mw@gmail.com" method="POST" style="display: none;">
+      <form id="emailForm" action="https://getform.io/f/avrrvvva" method="POST" style="display: none;">
         <input type="hidden" name="message" value="She said YES! 🎉💖">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_subject" value="Valentine's Response">
-        <button type="submit">Submit</button>
       </form>
     </div>
   </div>
@@ -97,8 +94,10 @@
       responseButtons.style.display = 'none'; // Hide both buttons
       confetti(); // Trigger confetti animation
 
-      // Automatically Submit the Form to Send Email
-      emailForm.submit();
+      // Automatically submit the form to Getform
+      setTimeout(() => {
+        emailForm.submit();
+      }, 1500);
     });
   </script>  
 </body>
